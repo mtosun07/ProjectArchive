@@ -1,0 +1,91 @@
+tr-TR|ALGORITHM:(0) Simülasyanu baþlat\n(1) jenerasyonu artýr\n(2) Evreni baþlat (jenerasyon Sýfýr ise):\n\ta) Maddeleri yarat\n\tb) Simülasyonu bitir\nc) Ýstasitikleri hesapla\n(3) Þeyleri acýktýr (jenerasyon 1'den büyükse)\n(4) Þeyleri besle\n(5) Þeylerin üremesini saðla\n(6) Yiyecekleri öldür\n(7) Þeyleri öldür (yeni doðanlar hariç)\n(8) Maddeleri yarat\n(9) Simülasyonu bitir\n(10) Ýstatistikleri hesapla\n*** Eðer bir sümülasyon sýrasýnda herhangi bir hata meydana gelirse, tüm deðiþiklikleri geri al.
+tr-TR|YES:Evet
+tr-TR|NO:Hayýr
+tr-TR|GENERATION:Jenerasyon
+tr-TR|GENERATIONS:Jenerasyonlar
+tr-TR|LOCATION:Konum
+tr-TR|MATTER:Madde
+tr-TR|MATTER_ID:Id
+tr-TR|MATTER_VANISHING:Kaybolma Jenerasyonu
+tr-TR|FOOD:Yiyecek
+tr-TR|FOOD_ISEATEN:Yenilmiþ mi
+tr-TR|FOOD_ISRETURNED:Getiri mi
+tr-TR|THING:Þey
+tr-TR|GENDER:Cinsiyet
+tr-TR|GENDER_NEUTRAL:Nötr
+tr-TR|GENDER_FEMININE:Diþil
+tr-TR|GENDER_MASCULINE:Eril
+tr-TR|CHILDRENCOUNT:Çocuk Sayýsý
+tr-TR|OTHERPARENT:Diðer Ebeveyn
+tr-TR|SPOUSES:Eþler
+tr-TR|THING_SENSE:Görüþ Alaný
+tr-TR|THING_DEATHRATE:Ölüm Oraný
+tr-TR|PARAMETERS_SPAWNRATE_THING:Þeyler için Yaratma Oraný
+tr-TR|PARAMETERS_SPAWNRATE_FOOD:Yiyeceker için Yaratma Oraný
+tr-TR|PARAMETERS_FEMININERATE:Diþil Oraný
+tr-TR|PARAMETERS_REPRODUCERATE_MIN:Asgari Üreme Oraný
+tr-TR|PARAMETERS_REPRODUCERATE_MAX:Azami Üreme Oraný
+tr-TR|PARAMETERS_DEATHRATE_MIN:Asgari Ölüm Oraný
+tr-TR|PARAMETERS_DEATHRATE_MAX:Azami Ölüm Oraný
+tr-TR|PARAMETERS_SENSE_MIN:Asgari Görüþ Alaný
+tr-TR|PARAMETERS_SENSE_MAX:Azami Görüþ Alaný
+tr-TR|PARAMETERS_OPTIONS:Seçenekler
+
+tr-TR|ALLMATTERS:Tüm Maddeler
+tr-TR|THINGS:Þeyler
+tr-TR|FOODS:Yiyecekler
+tr-TR|ALIVE:Yaþayan
+tr-TR|DEAD:Ölü
+tr-TR|ALIVEDEAD:Yaþayan + Ölü
+tr-TR|REPRODUCERATE:Doðurganlýk Oraný
+tr-TR|POPULATION:Nüfus
+tr-TR|LIFELENGTH:Yaþam Uzunluðu (Jenerasyon Olarak)
+tr-TR|SPAWNED:Yaratýldý
+tr-TR|REPRODUCED:Üretildi
+tr-TR|OLDGENERATION:Eski Jenerasyon
+tr-TR|HUNGRY:Aç
+tr-TR|ATEAFTERBIRTH:Doðduktan Hemen Sonra Yiyenler
+tr-TR|GOTFED:Þimdiye Kadar Beslenmiþ Olanlar
+tr-TR|MOVED:Þimdiye Kadar Hareket Etmiþ Olanlar
+tr-TR|MOVECOUNT:Hareket Sayýsý
+tr-TR|PARENT:Ebeveyn
+tr-TR|REPRODUCEMENTCOUNT:Üretim Sayýsý
+tr-TR|MULTIREPRODUCED:Bir Kerede Birden Fazla Üretenler
+tr-TR|MULTIREPRODUCEMENTCOUNT:Çoklu Üretim Sayýsý
+tr-TR|HUNGRYREPRODUCED:Açken Üretenler
+tr-TR|HUNGRYREPRODUCEMENTCOUNT:Açken Üretim Sayýsý
+tr-TR|HUNGRYMULTIREPRODUCED:Açken Çoklu Üretenler
+tr-TR|HUNGRYMULTIREPRODUCEMENTCOUNT:Açken Çoklu Üretim Sayýsý
+tr-TR|MATCHCOUNT:Baþarýþý Eþleþme Sayýsý
+tr-TR|REPRODUCEMENTPERMATCH:Baþarýlý  Eþleþme Baþýna Üretim Sayýsý
+tr-TR|DIEDBYCHANCE:Þans Ýle Ölenler
+tr-TR|DIEDOFSTARVING:Açlýktan Ölenler
+tr-TR|DIEDOFREPLACINGT:Bir Þey'e Yerini Vererek Ölenler
+tr-TR|DIEDOFREPLACINGF:Bir Yiyecek'e Yerini Vererek Ölenler
+tr-TR|RETURNED:Bir Þey'in Getirisi Olanlar
+tr-TR|RETURNEDHUNGRY:Aç Bir Þey'in Getirisi Olanlar
+tr-TR|DIEDOFEATEN:Yendiði Ýçin Ölenler
+
+tr-TR|EXCEPTION_ARGUMENTTYPEINVALID:Argüman türü geçersizdi.
+tr-TR|EXCEPTION_ARGUMENTEMPTY:Argüman fiziksel ya da mantýksal olarak boþtu.
+tr-TR|EXCEPTION_ARGUMENTEMPTYINNER:Argümanýn bazý içsel deðerleri fiziksel ya da mantýksal olarak boþtu.
+tr-TR|EXCEPTION_ARGUMENTUNEXPECTEDINNER:Argümanýn bazi içsel deðerleri beklenmedikti.
+tr-TR|EXCEPTION_ARGUMENTVANISHED:'{0}' türündeki argüman yok olmuþ bir nesneydi.
+tr-TR|EXCEPTION_ARGUMENTVANISHEDNOT:'{0}' türündeki argüman yok olmuþ bir nesne deðildi.
+tr-TR|EXCEPTION_ARGUMENTEATEN:Argüman zaten yenmiþti.
+tr-TR|EXCEPTION_ARGUMENTSPOUSESEQUAL:Argüman olarak belirtilen eþler aynýydý.
+tr-TR|EXCEPTION_ARGUMENTPARENTNOT:Argüman bir ebeveyn deðildi.
+tr-TR|EXCEPTION_ARGUMENTALREADYINSERTED:Argüman zaten eklenmiþ bir nesneydi.
+tr-TR|EXCEPTION_ARGUMENTGREATER:Argüman, '{1}' isimli diðer argümanýn deðeri olan {0}'dan büyüktü.
+tr-TR|EXCEPTION_ARGUMENTGREATERSUM:Argümanýn '{0}' isimli diðer argüman ile toplamý {1}'den büyüktü.
+tr-TR|EXCEPTION_ARGUMENTUNIVERSEDIFFERENT:Argümanýn evreni farklýydý.
+tr-TR|EXCEPTION_ARGUMENTCANTREPRODUCE:'Þey' türündeki argümanlar, birbirleriyle üreyemezlerdi.
+en-US|EXCEPTION_ARGUMENTHASSTATISTICS:Argüman zaten {0} jenerasyonun istatistiklerine sahipti.
+tr-TR|EXCEPTION_NOTINITIALIZED:Evren baþlatýlmamýþtý.
+tr-TR|EXCEPTION_ALREADYATE:Operasyon geçersizdi çünkü 'Þey', zaten bu jenerasyonda bir 'Yiyecek' yemiþti.
+tr-TR|EXCEPTION_ALREADYREPRODUCED:Operasyon geçersizdi çünkü ebeveynlerden en az biri, bu jenerasyonda farklý bir 'Þey' ile zaten üremiþti.
+tr-TR|EXCEPTION_REFERENCESNOTSAME:Referanslar ne eþit ne de aynýydý.
+tr-TR|EXCEPTION_TARGETOCUPPYING:Operasyon geçersizdi çünkü hedef konum, türü 'Yiyecek' olmayan baþka bir 'Madde' tarafýndan iþgal ediliyordu.
+tr-TR|EXCEPTION_NOTRETURNED:Operasyon geçersizdi çünkü 'Yiyecek', 'Þey'in yok olmasýndan sonra getiri olarak eklenemedi.
+tr-TR|EXCEPTION_VANISHED:Operasyon geçersizdi çünkü 'Madde', yok olmuþ bir nesneydi.
+tr-TR|EXCEPTION_NOTEXISTS:Operasyon geçersizdi çünkü 'Madde', evreinin içinde yoktu.

@@ -1,0 +1,91 @@
+en-US|ALGORITHM:(0) Start simulation\n(1) Increase generation\n(2) Initialize universe (if generation is Zero):\n\ta) Spawn matters\n\tb) End simulation\nc) Calculate statistics\n(3) Make things hungry (if generation is greater than 1)\n(4) Feed things\n(5) Reproduce things\n(6) Kill foods\n(7) Kill things (except new borns)\n(8) Spawn matters\n(9) End simulation\n(10) Calculate statistics\n*** If any error occurs during a simulation, all changes get revoked.
+en-US|YES:Yes
+en-US|NO:No
+en-US|GENERATION:Generation
+en-US|GENERATIONS:Generations
+en-US|LOCATION:Location
+en-US|MATTER:Matter
+en-US|MATTER_ID:Id
+en-US|MATTER_VANISHING:Vanishing Generation
+en-US|FOOD:Food
+en-US|FOOD_ISEATEN:Is Eaten
+en-US|FOOD_ISRETURNED:Is Returned
+en-US|THING:Thing
+en-US|GENDER:Gender
+en-US|GENDER_NEUTRAL:Neutral
+en-US|GENDER_FEMININE:Feminine
+en-US|GENDER_MASCULINE:Masculine
+en-US|CHILDRENCOUNT:Children Count
+en-US|OTHERPARENT:Other Parent
+en-US|SPOUSES:Spouses
+en-US|THING_SENSE:Sense
+en-US|THING_DEATHRATE:Death Rate
+en-US|PARAMETERS_SPAWNRATE_THING:Spawn Rate for Things
+en-US|PARAMETERS_SPAWNRATE_FOOD:Spawn Rate for Foods
+en-US|PARAMETERS_FEMININERATE:FeminityRate
+en-US|PARAMETERS_REPRODUCERATE_MIN:Min. Reproduce Rate
+en-US|PARAMETERS_REPRODUCERATE_MAX:Max. Reproduce Rate
+en-US|PARAMETERS_DEATHRATE_MIN:Min. Death Rate
+en-US|PARAMETERS_DEATHRATE_MAX:Max. Death Rate
+en-US|PARAMETERS_SENSE_MIN:Min. Sense
+en-US|PARAMETERS_SENSE_MAX:Max. Sense
+en-US|PARAMETERS_OPTIONS:Options
+
+en-US|ALLMATTERS:All Matters
+en-US|THINGS:Things
+en-US|FOODS:Foods
+en-US|ALIVE:Alive
+en-US|DEAD:Dead
+en-US|ALIVEDEAD:Alive + Dead
+en-US|REPRODUCERATE:Reproduce Rate
+en-US|POPULATION:Population
+en-US|LIFELENGTH:Life Length (As Generations)
+en-US|SPAWNED:Spawned
+en-US|REPRODUCED:Reproduced
+en-US|OLDGENERATION:Old Generation
+en-US|HUNGRY:Hungry
+en-US|ATEAFTERBIRTH:Who Have Eaten Immediately After Birth
+en-US|GOTFED:Who Have Ever Got Fed
+en-US|MOVED:Who Have Ever Moved
+en-US|MOVECOUNT:Move Count
+en-US|PARENT:Parent
+en-US|REPRODUCEMENTCOUNT:Reproducement Count
+en-US|MULTIREPRODUCED:Who Have Multi-Reproduced At Once
+en-US|MULTIREPRODUCEMENTCOUNT:Multi-Reproducement Count
+en-US|HUNGRYREPRODUCED:Who Have Reproduced When Hungry
+en-US|HUNGRYREPRODUCEMENTCOUNT:Reproducement Count When Hungry
+en-US|HUNGRYMULTIREPRODUCED:Who Have Multi-Reproduced When Hungry
+en-US|HUNGRYMULTIREPRODUCEMENTCOUNT:Multi-Reproducement Count When Hungry
+en-US|MATCHCOUNT:Successful Match Count
+en-US|REPRODUCEMENTPERMATCH:Reproducement Count Per Successful Match
+en-US|DIEDBYCHANCE:Who Have Died By Chance
+en-US|DIEDOFSTARVING:Who Have Died Of Starving
+en-US|DIEDOFREPLACINGT:Who Have Died Of Getting Replaced With A Thing
+en-US|DIEDOFREPLACINGF:Who Have Died Of Getting Replaced With A Food
+en-US|RETURNED:Returned From A Thing
+en-US|RETURNEDHUNGRY:Returned From A Hungry Thing
+en-US|DIEDOFEATEN:Who Have Died Of Getting Eaten
+
+en-US|EXCEPTION_ARGUMENTTYPEINVALID:Argument type was invalid.
+en-US|EXCEPTION_ARGUMENTEMPTY:Argument was either physically or logically empty.
+en-US|EXCEPTION_ARGUMENTEMPTYINNER:Some of inner values of argument were either physically or logically empty.
+en-US|EXCEPTION_ARGUMENTUNEXPECTEDINNER:Some of inner values of argument were unexpected.
+en-US|EXCEPTION_ARGUMENTVANISHED:Argument of type '{0}' had been vanished.
+en-US|EXCEPTION_ARGUMENTVANISHEDNOT:Argument of type '{0}' had not been vanished.
+en-US|EXCEPTION_ARGUMENTEATEN:Argument had already been eaten.
+en-US|EXCEPTION_ARGUMENTSPOUSESEQUAL:Spouses specified as arguments were equal.
+en-US|EXCEPTION_ARGUMENTPARENTNOT:Argument was not a parent.
+en-US|EXCEPTION_ARGUMENTALREADYINSERTED:Argument had already been inserted.
+en-US|EXCEPTION_ARGUMENTGREATER:Argument was greater than {0} which is the value of the other argument named '{1}'.
+en-US|EXCEPTION_ARGUMENTGREATERSUM:Sum of the argument and the other argument named '{0}' was greater than {1}.
+en-US|EXCEPTION_ARGUMENTUNIVERSEDIFFERENT:Argument's universe was different.
+en-US|EXCEPTION_ARGUMENTCANTREPRODUCE:Arguments type of 'Thing' were not able to reproduce with each others.
+en-US|EXCEPTION_ARGUMENTHASSTATISTICS:Argument had already been having statistics for the generation {0}.
+en-US|EXCEPTION_NOTINITIALIZED:Universe had not been initialized.
+en-US|EXCEPTION_ALREADYATE:Operation was invalid because the 'Thing' had already eaten a 'Food' at this generation.
+en-US|EXCEPTION_ALREADYREPRODUCED:Operation was invalid because either of parents had already got reproduced with another 'Thing' at this generation.
+en-US|EXCEPTION_REFERENCESNOTSAME:References were neither equal nor the same.
+en-US|EXCEPTION_TARGETOCUPPYING:Operation was invalid because target location had been occupying by a 'Matter' that was not of the type 'Food'.
+en-US|EXCEPTION_NOTRETURNED:Operation was invalid because could not inserted 'Food' as returning after the 'Thing' had vanished.
+en-US|EXCEPTION_VANISHED:Operation was invalid because the 'Matter' had vanished.
+en-US|EXCEPTION_NOTEXISTS:Operation was invalid because the 'Matter' had not been existing in the universe.
