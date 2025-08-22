@@ -1,0 +1,120 @@
+﻿USE WebSiteBaseDB
+GO
+
+
+
+--CREATE VIEW [vwSessionsOfUsers]
+--AS
+--	SELECT
+--			t2.[Id] AS [UserId],
+--			t2.[Username],
+--			t2.[IsEnabled] AS [IsUserEnabledCurrently],
+--			t3.[AttemptDate] AS [LoginDate],
+--			CONVERT(BIT, [dbo].[GetOldValue](t3.[AttemptDate], 'Users', t2.[Id], 'Is2FAActive')) AS [Was2FAActiveAtThatTime],
+--			t5.[Id] AS [SessionId],
+--			t5.[StartedAt] AS [SessionStartedAt],
+--			t5.[InitialClientIpAddressId],
+--			t6.[IpAddressV4] AS [InitialClientIpAddressV4],
+--			t5.[SessionVariablesJson],
+--			(CAST((
+--				SELECT
+--						COUNT(1)
+--				FROM [PageRequests]
+--				WHERE
+--					[Id] <> t5.[InitialPageRequestId] AND
+--					[SessionId] = t5.[Id]) AS INT) + 1) AS [CountOfPageRequests]
+--		FROM [UserLogins] t1
+--		INNER JOIN [UserLoginAttempts] t7 ON
+--			t1.[UserLoginAttemptId] = t7.[Id]
+--		INNER JOIN [Users] t2 ON
+--			t2.[Id] = t7.[ResultUserId]
+--		INNER JOIN [UserLoginAttempts] t3 ON
+--			t3.[Id] = t1.[UserLoginAttemptId]
+--		INNER JOIN [PageRequests] t4 ON
+--			t4.[Id] = t3.[PageRequestId]
+--		INNER JOIN [Sessions] t5 ON
+--			t5.[Id] = t4.[SessionId] OR
+--			t5.[InitialPageRequestId] = t4.[Id]
+--		INNER JOIN [ClientIpAddresses] t6 ON
+--			t6.[Id] = t5.[InitialClientIpAddressId]
+--GO
+
+
+--CREATE VIEW [vwFormResultsOfUsers]
+--AS
+--	SELECT
+--			t1.[Id] AS [FormResultId],
+--			t1.[RecordDate],
+--			t1.[FormName],
+--			t4.[UserId],
+--			t4.[Username],
+--			t4.[IsUserEnabledCurrently],
+--			t4.[Was2FAActiveAtThatTime],
+--			t4.[SessionId],
+--			t4.[SessionStartedAt],
+--			t1.[PageRequestId],
+--			t2.[RequestDate] AS [PageRequestDate],
+--			t2.[ClientIpAddressId],
+--			t5.[IpAddressV4],
+--			t2.[Path] AS [PageRequestPath],
+--			t2.[Result_FailureReason_EnumarationValue] AS [FailureReason_EnumarationValue],
+--			(SELECT COUNT(1) FROM [FormResultComponents] WHERE [FormResultId] = t1.[Id]) AS [CountOfFormResultComponents]
+--		FROM [FormResults] t1
+--		INNER JOIN [PageRequests] t2 ON
+--			t2.[Id] = t1.[PageRequestId]
+--		INNER JOIN [Sessions] t3 ON
+--			t3.[Id] = t2.[SessionId] OR
+--			t3.[InitialPageRequestId] = t2.[Id]
+--		INNER JOIN [vwSessionsOfUsers] t4 ON
+--			[t4].[SessionId] = t3.[Id]
+--		INNER JOIN [ClientIpAddresses] t5 ON
+--			t5.[Id] = t2.[ClientIpAddressId]
+--GO
+
+
+--CREATE VIEW [vwOperationsInBKMSDBOfUsers]
+--AS
+--	SELECT
+--			t1.[Id] AS [OperationLogId],
+--			t1.[OperationDate],
+--			t1.[UserId],
+--			t3.[Username],
+--			t1.[OperationType_EnumerationValue] AS [OperationGrant_EnumerationValue],
+--			t4.[Id] AS [SessionId],
+--			t4.[StartedAt] AS [SessionStartedAt],
+--			t1.[PageRequestId],
+--			t5.[RequestDate] AS [PageRequestDate],
+--			t5.[Path] AS [PageRequestPath],
+--			t6.[Id] AS [ClientIpAddressId],
+--			t6.[IpAddressV4],
+--			t1.[IUDLogId],
+--			t2.[OperationType_EnumerationValue],
+--			t2.[IsSuccess],
+--			t2.[TableName],
+--			t2.[PrimaryKeyColumnName],
+--			t2.[PrimaryKeyDataType],
+--			t2.[PrimaryKeyValue],
+--			t2.[AdditionalData],
+--			t7.[Id] AS [FormResultId],
+--			t7.[RecordDate] AS [FormResultRecordDate],
+--			t7.[FormName]
+--		FROM [OperationLogs] t1
+--		INNER JOIN [IUDLogs] t2 ON
+--			t2.[Id] = t1.[IUDLogId]
+--		INNER JOIN [Users] t3 ON
+--			t3.[Id] = t1.[UserId]
+--		LEFT JOIN [PageRequests] t5 ON
+--			t5.[Id] = t1.[PageRequestId]
+--		LEFT JOIN [Sessions] t4 ON
+--			t4.[Id] = t5.[SessionId] OR
+--			t4.[InitialPageRequestId] = t5.[Id]
+--		LEFT JOIN [ClientIpAddresses] t6 ON
+--			[t6].[Id] = t5.[ClientIpAddressId]
+--		LEFT JOIN [FormResults] t7 ON
+--			[t7].[PageRequestId] = t1.[PageRequestId]
+--		WHERE
+--			t1.[UserId] IS NOT NULL AND
+--			t1.[IUDLogId] IS NOT NULL AND
+--			t1.[TargetDatabaseName_Checksum] = CHECKSUM('BKMSDB') AND
+--			UPPER(t1.[TargetDatabaseName_Checksum]) = 'BKMSDB'
+--GO
